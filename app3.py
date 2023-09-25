@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters
-
 st.title("Satana Market yearly analysis")
 df = pd.read_csv('/Users/pranavaher/Desktop/projects/satana.csv')
 df
