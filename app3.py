@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters
+import seaborn as sns
 st.title("Satana Market yearly analysis")
 df = pd.read_csv('satana.csv')
 df
@@ -101,16 +102,17 @@ else:
 #plt.figure(figsize=(30, 130),dpi=500)
 #plt.plot(df[x_col], df[y_col], label='Max Price', color='blue', marker='o')
 register_matplotlib_converters()
-plt.figure(figsize=(12, 6), dpi=300)
-plt.bar(df[x_col],df[y_col], color='blue', alpha=1, edgecolor='black')
-
+#plt.figure(figsize=(12, 6), dpi=300)
+#plt.bar(df[x_col],df[y_col], color='blue', alpha=1, edgecolor='black')
+plt.figure(figsize=(30, 10))
+sns.lineplot(data=df, x=[x_col], y=[y_col], label='Max Price', color='red', marker='o')
 x_values = df['Price 2023'].tolist()
 
 plt.xlabel('Month')
 plt.ylabel('Max Price')
 plt.title('mp')
 plt.xticks(rotation=45)
-#plt.legend()
+plt.legend()
 plt.grid(True)
 
 st.pyplot(plt)
