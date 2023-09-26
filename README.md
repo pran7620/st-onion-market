@@ -1,5 +1,7 @@
 # st-onion-market
 
+Live Demo: https://st-onion-market-123.streamlit.app/
+
 This Streamlit script is designed to create an interactive web application for visualizing yearly market data using a CSV file. Let's break down the code and its functionality:
 
 Import Libraries:
