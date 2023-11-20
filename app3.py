@@ -116,3 +116,155 @@ plt.legend()
 plt.grid(True)
 
 st.pyplot(plt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+def knap(weights,values,k):
+    n=len(weights)
+    ratio=[(values[i]/weights[i],values[i],weights[i])for i in range(n)]
+    ratio.sort(reverse=True)
+    total_value=0
+    knapsack=[0]*n
+    
+    for i in range(n):
+        if weights[i]<=k:
+            knapsack[i]=1
+            total_value+=values[i]
+            k-=weights[i]
+            
+        else:
+            frac=k/weights[i]
+            knapsack[i]=frac
+            total_value+=values[i]*frac
+            break
+    return total_value,knapsack
+    
+weights = [10, 20, 30]
+values = [60, 100, 120]
+k = 50   
+items=knap(weights,values,k)
+print(f'total items:{items}')
+'''
